@@ -1,11 +1,11 @@
-// Esto no es un lenguaje compilado, si no interpretado
-// Entonces el navegador recorre el archivo js linea a linea
-
-console.log("Entró al index.js");
-
 document.addEventListener("DOMContentLoaded", onInit); // importante no poner parentesis
 
 function onInit() {
+
+  //actualizar año footer
+  const currentYear = new Date().getFullYear();
+  const yearElement = document.getElementById('year');
+  yearElement.textContent = currentYear;
   modificarDetallesNosotros();
 }
 
@@ -55,8 +55,7 @@ function onSubmit() {
   const form = document.getElementById("form-usuario");
 
   form.addEventListener("submit", (event) => {
-    // Luego del primer parcial, comenzaremos a enviar los datos a un externo
-    // evito el comportamiento que realiza por defecto
+    
     event.preventDefault();
     let arrData = [];
 
@@ -81,11 +80,4 @@ function onSubmit() {
         console.log("Ups!");
     }
   });
-}
-
-function checkDatosDelFormulario(arr) {
-    console.log(arr);
-
-
-    return true;
 }
