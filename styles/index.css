@@ -3,6 +3,12 @@
   src: url(../assets/fonts/Poppins-Black.ttf);
 }
 
+.granContenedor{
+  width: 100%;
+  max-width: 2000px;
+  margin: auto;
+  overflow:hidden;
+}
 
 
 header {
@@ -12,6 +18,7 @@ header {
   background-repeat: no-repeat;
   background-position: center center;
 
+  box-sizing: border-box;
   height: 100vh;
   flex-direction: column;
   justify-content: space-between;
@@ -19,12 +26,13 @@ header {
   /*font-family: poppins, sans-serif;*/
 }
 
-@media(max-width:760px) {
+/*
+@media(max-width:800px) {
   header {
     background-image: none;
     background: green;
   }
-}
+}*/
 
 
 .barra {
@@ -61,6 +69,11 @@ header h1 {
 
 /*Endregion*/
 
+
+.container-sections{
+  margin: auto;
+  box-sizing: border-box;
+}
 
 /*region mas sobre nosotros*/
 .centerH2 {
@@ -190,7 +203,7 @@ header h1 {
   background: #e08709;
 
   margin-left: auto;
-  margin-right: 30px;
+  margin-right: 200px;
   margin-top: 50px;
 }
 
@@ -200,12 +213,11 @@ header h1 {
 /*region contactanos*/
 
 .contactanos {
-  padding: 0px;
   background-image: url("./assets/images/encuentra.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  flex-direction: column;
+  box-sizing: border-box;
 }
+
+.alt
 
 .contactanos h2 {
 
@@ -292,12 +304,12 @@ body {
 }
 
 .blog-content h3 {
-  font-size: 20px;
+  font-size: 25px;
   margin: 0;
 }
 
 .blog-content p {
-  margin: 5px 0;
+  margin: 25px 0;
 }
 
 .comentarios {
@@ -337,6 +349,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 footer nav ul.flex {
