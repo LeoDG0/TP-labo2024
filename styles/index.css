@@ -39,6 +39,7 @@ header {
   padding-top: 10px;
   flex-direction: row;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
 header nav ul {
@@ -124,7 +125,7 @@ header h1 {
   flex-wrap: wrap;
   justify-items: center;
   justify-content: center;
-
+  box-sizing: border-box;
   gap: 0.5rem;
 }
 
@@ -217,8 +218,6 @@ header h1 {
   box-sizing: border-box;
 }
 
-.alt
-
 .contactanos h2 {
 
   position: relative;
@@ -263,9 +262,6 @@ header h1 {
 
 /*region blog y comentarios*/
 body {
-
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -273,6 +269,7 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .blog {
@@ -300,6 +297,8 @@ body {
 
 .blog-content {
   flex: 1;
+  width: 70%;
+  padding: 20px;
   background-color: rgb(186, 211, 186);
 }
 
