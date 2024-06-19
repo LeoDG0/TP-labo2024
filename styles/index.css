@@ -1,6 +1,6 @@
 @font-face {
-	font-family: 'poppins';
-	src: url(../assets/fonts/Poppins-Black.ttf);
+  font-family: 'poppins';
+  src: url(../assets/fonts/Poppins-Black.ttf);
 }
 
 
@@ -15,11 +15,11 @@ header {
   height: 100vh;
   flex-direction: column;
   justify-content: space-between;
-  
+
   /*font-family: poppins, sans-serif;*/
 }
 
-@media(max-width:760px) {  
+@media(max-width:760px) {
   header {
     background-image: none;
     background: green;
@@ -43,7 +43,7 @@ header nav ul {
 
 header nav ul li a {
   color: white;
-  
+
   text-decoration: none;
   margin-right: 20px;
   font-size: 20px;
@@ -58,34 +58,36 @@ header h1 {
   left: 5px;
   top: -160px;
 }
+
 /*Endregion*/
 
 
 /*region mas sobre nosotros*/
-.centerH2{
+.centerH2 {
   margin-top: 50px;
   text-align: center;
 }
 
-.centerCasasVenta{
+.centerCasasVenta {
   text-align: center;
 }
 
-.container-details{
+.container-details {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.container-details{
+.container-details {
   margin-top: 40px;
   text-align: center;
 }
 
-.container-details img{
+.container-details img {
   display: block;
   margin: 0 auto;
 }
+
 /*endregion*/
 
 
@@ -122,7 +124,7 @@ header h1 {
   height: auto;
 
   opacity: 0.75;
-	transition: opacity 2s;
+  transition: opacity 2s;
 
   /* border-top-left-radius: 1rem;
   border-top-right-radius: 1rem; */
@@ -172,7 +174,7 @@ header h1 {
   background: #e08709;
 }
 
-.botonVerMas{
+.botonVerMas {
   width: 190px;
   height: 60px;
 
@@ -197,7 +199,7 @@ header h1 {
 
 /*region contactanos*/
 
-.contactanos{
+.contactanos {
   padding: 0px;
   background-image: url("./assets/images/encuentra.jpg");
   background-repeat: no-repeat;
@@ -205,7 +207,7 @@ header h1 {
   flex-direction: column;
 }
 
-.contactanos h2{
+.contactanos h2 {
 
   position: relative;
   left: 50px;
@@ -214,8 +216,8 @@ header h1 {
   font-size: 50px;
 }
 
-.contactanos h3{
-  
+.contactanos h3 {
+
   position: relative;
   left: 50px;
   bottom: 335px;
@@ -224,7 +226,7 @@ header h1 {
 
 }
 
-.contactoBTN{
+.contactoBTN {
 
   width: 190px;
   height: 60px;
@@ -244,57 +246,58 @@ header h1 {
   left: 50px;
   bottom: 200px;
 }
+
 /*endregion*/
 
 /*region blog y comentarios*/
 body {
-    
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .contenedor {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
 }
 
 .blog {
-    width: 61%;
+  width: 61%;
 }
 
 .blog h2 {
-    font-size: 25px;
-    margin-bottom: 20px;
-    text-align: center;
-    background-color: #ECDFDF;
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #ECDFDF;
 }
 
 .blog-post {
-    display: flex;
-    margin-bottom: 20px;
+  display: flex;
+  margin-bottom: 20px;
 }
 
 .coment-image img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-right: 20px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 20px;
 }
 
 .blog-content {
-    flex: 1;
-    background-color: rgb(186, 211, 186);
+  flex: 1;
+  background-color: rgb(186, 211, 186);
 }
 
 .blog-content h3 {
-    font-size: 20px;
-    margin: 0;
+  font-size: 20px;
+  margin: 0;
 }
 
 .blog-content p {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .comentarios {
@@ -303,53 +306,55 @@ body {
   color: rgb(68, 40, 40);
   text-align: center;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
 }
+
 .comentarios h2 {
-    font-size: 24px;
-    margin-bottom: 130px;
-    background-color: #ECDFDF;
+  font-size: 24px;
+  margin-bottom: 130px;
+  background-color: #ECDFDF;
 }
 
 .comentarios .comentario {
-    font-size: 17px;
+  font-size: 17px;
 }
 
 .comentarios .autor {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
 }
+
 /*endregion*/
 
 /*region footer*/
 footer {
-    background-color: #333;
-    color: white;
-    height: 65px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    padding: 0 20px; 
+  background-color: #333;
+  color: white;
+  height: 65px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
 footer nav ul.flex {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 footer nav ul.flex li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 footer nav ul.flex li a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 footer p {
-    margin: 0;
+  margin: 0;
 }
