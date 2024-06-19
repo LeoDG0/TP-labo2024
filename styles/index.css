@@ -1,5 +1,5 @@
 @font-face {
-	font-family: poppins;
+	font-family: 'poppins';
 	src: url(../assets/fonts/Poppins-Black.ttf);
 }
 
@@ -16,7 +16,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   
-  /*¿font-family: poppins, sans-serif;*/
+  /*font-family: poppins, sans-serif;*/
 }
 
 @media(max-width:760px) {  
@@ -57,6 +57,8 @@ header h1 {
   position: relative;
   left: 5px;
   top: -160px;
+
+  font-family: ;
 }
 /*Endregion*/
 
@@ -89,7 +91,7 @@ header h1 {
 /*endregion*/
 
 
-/*Start region casas en venta*/
+/*region casas en venta*/
 .centerCasasVenta {
   margin-top: 80px;
   text-align: center;
@@ -101,7 +103,7 @@ header h1 {
   /* border-radius: 1rem; */
   border: black solid 1px;
 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para resaltar la tarjeta */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .house-articles {
@@ -245,3 +247,111 @@ header h1 {
   bottom: 200px;
 }
 /*endregion*/
+
+/*region blog y comentarios*/
+body {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.blog {
+    width: 61%;
+}
+
+.blog h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #ECDFDF;
+}
+
+.blog-post {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.coment-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.blog-content {
+    flex: 1;
+    background-color: rgb(186, 211, 186);
+}
+
+.blog-content h3 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.blog-content p {
+    margin: 5px 0;
+}
+
+.comentarios {
+  width: 25%;
+  background-color: #5b9e5b;
+  color: rgb(68, 40, 40);
+  text-align: center;
+  display: flex;
+  flex-direction: column;  
+}
+.comentarios h2 {
+    font-size: 24px;
+    margin-bottom: 130px;
+    background-color: #ECDFDF;
+}
+
+.comentarios .comentario {
+    font-size: 17px;
+}
+
+.comentarios .autor {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+/*endregion*/
+
+/*region footer*/
+footer {
+    background-color: #333;
+    color: white;
+    height: 65px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0 20px; 
+}
+
+footer nav ul.flex {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer nav ul.flex li {
+    margin: 0 15px;
+}
+
+footer nav ul.flex li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer p {
+    margin: 0;
+}
