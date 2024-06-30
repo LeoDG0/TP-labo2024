@@ -225,8 +225,8 @@ body {
 }
 
 .coment-image img {
-  width: 150px;
-  height: 150px;
+  width: 190px;
+  height: 180px;
   object-fit: cover;
   margin-right: 20px;
 }
@@ -275,40 +275,6 @@ body {
   margin-right: 10px;
 }
 /*endregion*/
-
-/*region footer*/
-footer {
-  background-color: #333;
-  color: white;
-  height: 65px;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-footer nav ul.flex {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-footer nav ul.flex li {
-  margin: 0 15px;
-}
-
-footer nav ul.flex li a {
-  color: white;
-  text-decoration: none;
-}
-
-footer p {
-  margin: 0;
-}
-
 
 /*boton wpp*/
 .float-button {
