@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./styles/index.css" />
   <script src="./js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0">
@@ -94,97 +95,15 @@
       <section class="centerCasasVenta">
         <h2>Casas y Departamentos en Venta</h2>
 
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col">
-            <div class="card h-100">
-              <img src="./assets/images/anuncio1.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Casa de lujo en el lago</h5>
-                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti molestiae at.
-                </p>
-                <div class="price">U$S350.000</div>
-                <div class="icons">
-                  <div class="icon">
-                    <img src="./assets/images/icono_wc.svg" alt="Baños">
-                    <div>3</div>
-                  </div>
-                  <div class="icon">
-                    <img src="./assets/images/icono_dormitorio.svg" alt="Cochera">
-                    <div>3</div>
-                  </div>
-                  <div class="icon">
-                    <img src="./assets/images/icono_estacionamiento.svg" alt="Habitaciones">
-                    <div>4</div>
-                  </div>
-                </div>
-                <a href="#" class="btn btn-warning d-flex justify-content-center align-items-center">Ver Propiedad</a>
-              </div>
-              <div class="card-footer">
-                <small class="text-body-secondary">Last updated 3 mins ago</small>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="./assets/images/anuncio2.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Casa terminados de lujo</h5>
-                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-                  molestiae at.</p>
-                <div class="price">U$S275.000</div>
-                <div class="icons">
-                  <div class="icon">
-                    <img src="./assets/images/icono_wc.svg" alt="Baños">
-                    <div>3</div>
-                  </div>
-                  <div class="icon">
-                    <img src="./assets/images/icono_dormitorio.svg" alt="Cochera">
-                    <div>3</div>
-                  </div>
-                  <div class="icon">
-                    <img src="./assets/images/icono_estacionamiento.svg" alt="Habitaciones">
-                    <div>4</div>
-                  </div>
-                </div>
-                <a href="#" class="btn btn-warning d-flex justify-content-center align-items-center">Ver Propiedad</a>
-              </div>
-              <div class="card-footer">
-                <small class="text-body-secondary">Last updated 3 mins ago</small>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="./assets/images/anuncio3.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Casa con pileta</h5>
-                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-                  molestiae at.</p>
-                <div class="price">U$S250.000</div>
-                <div class="icons">
-                  <div class="icon">
-                    <img src="./assets/images/icono_wc.svg" alt="Baños">
-                    <div>3</div>
-                  </div>
-                  <div class="icon">
-                    <img src="./assets/images/icono_dormitorio.svg" alt="Cochera">
-                    <div>3</div>
-                  </div>
-                  <div class="icon">
-                    <img src="./assets/images/icono_estacionamiento.svg" alt="Habitaciones">
-                    <div>4</div>
-                  </div>
-                </div>
-                <a href="#" class="btn btn-warning d-flex justify-content-center align-items-center">Ver Propiedad</a>
-              </div>
-              <div class="card-footer">
-                <small class="text-body-secondary">Last updated 3 mins ago</small>
-              </div>
-            </div>
-          </div>
+        <div id="cardsContainer" class="row row-cols-1 row-cols-md-3 g-4">
+          <!-- aca van los template -->
         </div>
 
-        <a href="#" class="btn btn-primary d-flex justify-content-center align-items-center botonVerMas">Ver Mas</a>
+        <button class="btn-31" style="margin-top: 20px;">
+          <span class="text-container">
+            <span class="text">Ver mas</span>
+          </span>
+        </button>        
       </section>
 
       <section class="contactanos">
@@ -193,8 +112,7 @@
           <img src="./assets/images/encuentra.jpg" alt="fondoContacanos">
           <h3>Llena el formulario de contacto y un asesor se pondra en contacto a la brevedad</h3>
 
-          <a href="#"
-            class="btn btn-success d-flex justify-content-center align-items-center contactoBTN">Contactanos</a>
+          <a href="#" id="contactBtn" class="contactoBTN">Contactanos</a>
         </div>
       </section>
 
@@ -252,9 +170,9 @@
 
         <section class="">
           <p class="d-flex justify-content-center align-items-center">
-            <span class="me-3">Register for free</span>
+            <span class="me-3">Registrese gratis!</span>
             <button data-mdb-ripple-init type="button" class="btn btn-outline-light btn-rounded">
-              Sign up!
+              Registrarse
             </button>
           </p>
         </section>
@@ -263,11 +181,43 @@
         © <span id="year"></span> Todos los derechos reservados.
       </div>
 
-    </footer>
-
+    </footer>  
   </section>
-
   </div>
+  <template id="propertyCardTemplate">
+    <div class="col">
+      <div class="card h-100">
+        <img class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text"></p>
+          <div class="price"></div>
+          <div class="icons">
+            <div class="icons">
+              <div class="icon">
+                <img src="./assets/images/icono_wc.svg" alt="Baños">
+                <div></div> 
+              </div>
+              <div class="icon">
+                <img src="./assets/images/icono_dormitorio.svg" alt="Dormitorios">
+                <div></div> 
+              </div>
+              <div class="icon">
+                <img src="./assets/images/icono_estacionamiento.svg" alt="Estacionamientos">
+                <div></div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn btn-warning d-flex justify-content-center align-items-center">Ver Propiedad</a>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+  </template>
+
+
 </body>
 
 </html>

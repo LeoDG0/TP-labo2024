@@ -9,6 +9,92 @@ function onInit() {
   modificarDetallesNosotros();
 }
 
+//templates
+document.addEventListener('DOMContentLoaded', function () {
+  const properties = [
+    { image: './assets/images/anuncio1.jpg', title: 'Casa de lujo en el lago', description: 'Lorem ipsum dolor sit amet.', price: 'U$S350.000', bathrooms: 3, bedrooms: 4, parking: 3 },
+    { image: './assets/images/anuncio2.jpg', title: 'Casa terminados de lujo', description: 'Lorem ipsum dolor sit amet.', price: 'U$S275.000', bathrooms: 3, bedrooms: 4, parking: 3 },
+    { image: './assets/images/anuncio3.jpg', title: 'Casa con pileta', description: 'Lorem ipsum dolor sit amet.', price: 'U$S250.000', bathrooms: 3, bedrooms: 4, parking: 3 }
+  ];
+
+  const cardContainer = document.getElementById('cardsContainer');
+  const template = document.getElementById('propertyCardTemplate');
+
+  properties.forEach(property => {
+    const clone = document.importNode(template.content, true);
+    clone.querySelector('.card-img-top').src = property.image;
+    clone.querySelector('.card-title').textContent = property.title;
+    clone.querySelector('.card-text').textContent = property.description;
+    clone.querySelector('.price').textContent = property.price;
+    clone.querySelector('.icon img[src$="icono_wc.svg"] + div').textContent = property.bathrooms;
+    clone.querySelector('.icon img[src$="icono_dormitorio.svg"] + div').textContent = property.bedrooms;
+    clone.querySelector('.icon img[src$="icono_estacionamiento.svg"] + div').textContent = property.parking;
+
+    cardContainer.appendChild(clone);
+  });
+});
+
+//animacion boton ver mas
+document.addEventListener('DOMContentLoaded', function() {
+  const button = document.getElementById('animatedButton');
+  
+  button.addEventListener('mouseenter', function() {
+    const text = this.textContent;
+    this.innerHTML = `<span>${text}</span>`;
+    const span = this.querySelector('span');
+    
+    span.style.display = 'inline-block';
+    span.style.transition = 'transform 0.3s ease';
+    
+    setTimeout(() => {
+      span.style.transform = 'translateY(100%)';
+      
+      setTimeout(() => {
+        span.style.transform = 'translateY(-100%)';
+        
+        setTimeout(() => {
+          span.style.transform = 'translateY(0)';
+        }, 10);
+      }, 150);
+    }, 0);
+  });
+});
+
+//animar boton contactanos
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.getElementById('contactBtn');
+  
+  const topCurtain = document.createElement('div');
+  const bottomCurtain = document.createElement('div');
+  
+  const curtainStyle = `
+    position: absolute;
+    width: 95%;
+    height: 40%;
+    background-color: #e08709;
+    transition: transform 0.5s;
+  `;
+  topCurtain.style.cssText = curtainStyle + 'top: -10px; left: 3%;';
+  bottomCurtain.style.cssText = curtainStyle + 'bottom: -10px; left: 3%;';
+  
+  btn.appendChild(topCurtain);
+  btn.appendChild(bottomCurtain);
+  
+  function handleHover(isHovering) {
+    const transform = isHovering ? 'scale(0)' : 'scale(1)';
+    topCurtain.style.transform = transform;
+    bottomCurtain.style.transform = transform;
+    
+    btn.style.boxShadow = isHovering ? 'inset 0px 0px 25px #149CEA' : 'none';
+    btn.style.backgroundColor = isHovering ? 'transparent' : '#e08709';
+  }
+  
+  btn.addEventListener('mouseenter', () => handleHover(true));
+  btn.addEventListener('mouseleave', () => handleHover(false));
+});
+
+
+
 function modificarDetallesNosotros() {
   const arr = getFromApi();
   var divDad = document.getElementById("container-details");
